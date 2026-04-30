@@ -15,7 +15,11 @@ class ExpenseTrackerApp:
         
         # المتغيرات الخاصة بالتطبيق
         self.total_usd = 0.0
+<<<<<<< HEAD
         self.api_key = os.getenv("API_KEY")
+=======
+        self.api_key = "7385506094a67e1d498d14ab" 
+>>>>>>> 9fcf6cba7505ecd33530a69cb954ad2875133e1e
         self.base_url = f"https://v6.exchangerate-api.com/v6/{self.api_key}/latest/"
 
         # --- تهيئة الـ GUI ---
