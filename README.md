@@ -16,6 +16,7 @@ A feature-rich desktop application built with Python and Tkinter to help you tra
 - **Language:** Python 3.x
 - **GUI Framework:** Tkinter, ttk
 - **Libraries:** `requests`, `tkcalendar`, `python-dotenv`
+  
 
 ## 🚀 How to Run
 
@@ -37,5 +38,7 @@ Run the application:
 
 Bash
 python main.py
+
+
 👨‍💻 Author
 Yousof Ahmad Ibrahim Ramzy Systems & Computer Engineering Student @ Al-Azhar University
