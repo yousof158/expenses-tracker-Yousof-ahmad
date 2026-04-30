@@ -40,5 +40,6 @@ Bash
 python main.py
 
 
-👨‍💻 Author
+👨‍💻 Author:
+
 Yousof Ahmad Ibrahim Ramzy Systems & Computer Engineering Student @ Al-Azhar University
