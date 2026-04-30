@@ -5,7 +5,6 @@ import requests
 import os
 from dotenv import load_dotenv
 
-
 load_dotenv() 
 class ExpenseTrackerApp:
     def __init__(self, root):
@@ -13,16 +12,16 @@ class ExpenseTrackerApp:
         self.root.title("Yousof's Expenses Tracker 💰")
         self.root.geometry("700x650")
         
-        # المتغيرات الخاصة بالتطبيق
+        # Application variables
         self.total_usd = 0.0
         self.api_key = os.getenv("API_KEY")
         self.base_url = f"https://v6.exchangerate-api.com/v6/{self.api_key}/latest/"
 
-        # --- تهيئة الـ GUI ---
+        # --- Setup GUI ---
         self.setup_ui()
 
     def setup_ui(self):
-        # 1. قسم الإدخال (Input Section)
+        # 1. Input Section
         input_frame = tk.LabelFrame(self.root, text="Add New Expense", font=("Arial", 12, "bold"), padx=10, pady=10)
         input_frame.pack(fill="x", padx=20, pady=10)
 
@@ -61,32 +60,32 @@ class ExpenseTrackerApp:
         add_btn = tk.Button(input_frame, text="Add Expense ➕", bg="#4CAF50", fg="white", font=("Arial", 10, "bold"), command=self.add_expense)
         add_btn.grid(row=3, column=0, columnspan=4, pady=15, sticky="ew")
 
-        # 2. جدول العرض (Display Table)
+        # 2. Display Table
         display_frame = tk.Frame(self.root)
         display_frame.pack(fill="both", expand=True, padx=20, pady=10)
 
         columns = ("amount", "currency", "category", "method", "date")
         self.tree = ttk.Treeview(display_frame, columns=columns, show="headings", height=15)
 
-        # تعريف الأعمدة
+        # Define columns
         headers = ["Amount", "Currency", "Category", "Payment Method", "Date"]
         for col, header in zip(columns, headers):
             self.tree.heading(col, text=header)
             self.tree.column(col, anchor="center", width=100)
 
-        # شريط التمرير (Scrollbar)
+        # Scrollbar
         scrollbar = ttk.Scrollbar(display_frame, orient="vertical", command=self.tree.yview)
         self.tree.configure(yscroll=scrollbar.set)
         
         self.tree.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
 
-        # سطر الإجمالي (Initial Total Row)
+        # Initial Total Row
         self.tree.insert("", "end", iid="total_row", values=("0.00", "USD", "TOTAL", "---", "---"), tags=("total",))
         self.tree.tag_configure("total", background="#e3f42a", foreground="black", font=("Arial", 10, "bold"))
 
     def get_conversion_rate(self, currency_code):
-        """جلب سعر الصرف من الـ API"""
+        """Fetch exchange rate from the API"""
         try:
             url = self.base_url + currency_code
             response = requests.get(url)
@@ -137,7 +136,7 @@ class ExpenseTrackerApp:
 
 if __name__ == "__main__":
     root = tk.Tk()
-    # تطبيق ثيم بسيط لتحسين الشكل
+    # Apply a simple theme to improve appearance
     style = ttk.Style()
     style.theme_use('clam') 
     
