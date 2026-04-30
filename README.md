@@ -1,7 +1,6 @@
-Markdown
 # 💰 Yousof's Expenses Tracker
 
-A feature-rich desktop application built with Python and Tkinter to help you track your daily expenses. It automatically converts different currencies to a unified USD total using a live exchange rate API! 🚀
+A feature-rich desktop application built with Python and Tkinter to help you track your daily expenses. It automatically converts different currencies to a unified USD total using a live exchange rate API.
 
 ## ✨ Features
 - **Interactive GUI:** Clean and user-friendly interface built with `Tkinter`.
@@ -16,30 +15,32 @@ A feature-rich desktop application built with Python and Tkinter to help you tra
 - **Language:** Python 3.x
 - **GUI Framework:** Tkinter, ttk
 - **Libraries:** `requests`, `tkcalendar`, `python-dotenv`
-  
 
 ## 🚀 How to Run
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/yousof158/expenses-tracker-Yousof-ahmad.git](https://github.com/yousof158/expenses-tracker-Yousof-ahmad.git)
+   git clone https://github.com/yousof158/expenses-tracker-Yousof-ahmad.git
    cd expenses-tracker-Yousof-ahmad
-Install dependencies:
-Make sure you have Python installed, then run:
+   ```
 
-Bash
-pip install requests tkcalendar python-dotenv
-Set up Environment Variables:
-Create a .env file in the root directory and add your API key:
+2. **Install dependencies:**
+   Make sure you have Python installed, then run:
+   ```bash
+   pip install requests tkcalendar python-dotenv
+   ```
 
-Code snippet
-API_KEY=your_api_key_here
-Run the application:
+3. **Set up Environment Variables:**
+   Create a `.env` file in the root directory and add your API key:
+   ```
+   API_KEY=your_api_key_here
+   ```
 
-Bash
-python main.py
+4. **Run the application:**
+   ```bash
+   python main.py
+   ```
 
+## 👨‍💻 Author
 
-👨‍💻 Author:
-
-Yousof Ahmad Ibrahim Ramzy Systems & Computer Engineering Student @ Al-Azhar University
+Yousof Ahmad Ibrahim Ramzy - Systems & Computer Engineering Student @ Al-Azhar University
