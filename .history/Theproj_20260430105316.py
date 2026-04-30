@@ -2,11 +2,8 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from tkcalendar import DateEntry
 import requests
-import os
-from dotenv import load_dotenv
 
 
-load_dotenv() 
 class ExpenseTrackerApp:
     def __init__(self, root):
         self.root = root
@@ -15,7 +12,7 @@ class ExpenseTrackerApp:
         
         # المتغيرات الخاصة بالتطبيق
         self.total_usd = 0.0
-        self.api_key = os.getenv("API_KEY")
+        self.api_key = "7385506094a67e1d498d14ab" 
         self.base_url = f"https://v6.exchangerate-api.com/v6/{self.api_key}/latest/"
 
         # --- تهيئة الـ GUI ---
